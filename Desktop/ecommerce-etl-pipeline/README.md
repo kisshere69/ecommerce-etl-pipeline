@@ -1,7 +1,7 @@
 # E-commerce ETL Pipeline
 
 ## Overview
-This project demonstrates a simple ETL pipeline using Python (pandas) and SQL.
+This project demonstrates a simple ETL pipeline using Python (pandas) and SQL (PostgreSQL).
 
 ## Data Issues Handled
 - Missing dates
@@ -11,7 +11,7 @@ This project demonstrates a simple ETL pipeline using Python (pandas) and SQL.
 - Future dates
 
 ## Architecture
-Raw CSV → Transform → SQLite → Analytics Queries
+Raw CSV → Transform → PostgreSQL → Analytics Queries
 
 ## How to Run
 
