@@ -1,7 +1,17 @@
-import sqlite3
+from sqlalchemy import create_engine
 
 def load(df):
-    conn = sqlite3.connect("ecommerce.db")
-    df.to_sql("orders", conn, if_exists="replace", index=False)
-    conn.close()
-    print("Data loaded into SQLite.")
+
+    engine = create_engine(
+        "postgresql+psycopg2://postgres:AdminPassword@localhost:5432/ecommerce"
+    )
+
+    df.to_sql(
+        "orders_clean",
+        engine,
+        schema="analytics",
+        if_exists="replace",
+        index=False
+    )
+
+    print("Data loaded into PostgreSQL.")
